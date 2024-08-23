@@ -6,4 +6,6 @@
 body{
   background-color: rgb(2 6 23);
   color: rgb(255 255 255);
+  padding: 0;
+  margin: 0;
 }
