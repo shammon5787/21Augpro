@@ -7,8 +7,7 @@ const Store = configureStore({
     reducer:{
         category: CategoryReducer ,
         search: SearchReducer ,
-        cart: CardReducer ,
+        cart : CardReducer ,
     }
 })
-
 export default Store

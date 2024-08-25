@@ -7,10 +7,10 @@ import Card from '../Components/Card'
 const Home = () => {
   return (
     <div className='m-6'>
-        <Navbar />
-        <CategoryMenu />
-        <FoodItem />
-        <Card />
+      <Navbar />
+      <CategoryMenu />
+      <FoodItem />
+      <Card />
     </div>
   )
 }

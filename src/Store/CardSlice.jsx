@@ -7,26 +7,25 @@ const CardSlice = createSlice({
     },
     reducers:{
         addCard:(state, action)=>{
-            const existingItem = state.cart.find((item)=>item.id === action.payload.id);
+            const existingItem = state.cart.find((item)=>item.id === action.payload.id)
             if(existingItem){
-                state.cart = state.cart.map((item)=>item.id === action.payload.id ? {... item, qty:item.qty + 1} : item)
+                state.cart = state.cart.map((item)=>item.id === action.payload.id ? {... item, qty:item.qty + 1} : 1)
             }else{
                 state.cart.push(action.payload)
             }
         },
         removeCard:(state, action)=>{
             state.cart = state.cart.filter((item)=>item.id !== action.payload.id)
-        },
-        incrementItem:(state, action)=>{
-            state.cart = state.cart.map((item)=>item.id === action.payload.id ? {... item, qty:item.qty + 1} : item)
-        },
-        decrementItem:(state, action)=>{
-            state.cart = state.cart.map((item)=>item.id === action.payload.id ? {... item, qty:item.qty - 1} : item)
-        }
+          },
+          incrementItem:(state, action)=>{
+            state.cart = state.cart.map((item)=>item.id === action.payload.id ? {... item, qty:item.qty + 1} : 1)
+          },
+          decrementItem:(state, action)=>{
+            state.cart = state.cart.map((item)=>item.id === action.payload.id ? {... item, qty:item.qty - 1} : 1)
+          }
     }
 })
 
 export const {addCard, removeCard, incrementItem, decrementItem} = CardSlice.actions
 export default CardSlice.reducer
-
 

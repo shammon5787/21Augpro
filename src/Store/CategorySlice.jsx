@@ -6,11 +6,10 @@ const CategorySlice = createSlice({
         category: "All"
     },
     reducers:{
-        addCategory:(state, action)=>{
+        AddCategory:(state, action)=>{
             state.category = action.payload
         }
     }
 })
-
-export const {addCategory} = CategorySlice.actions
+export const {AddCategory} = CategorySlice.actions
 export default CategorySlice.reducer
